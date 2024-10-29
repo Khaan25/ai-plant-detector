@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
 
   // If the rate limit is exceeded, respond with an error
   if (!rateLimitResponse.success) {
-    return NextResponse.json({ error: 'Rate limit exceeded. Please try again later.' }, { status: 429 })
+    return NextResponse.json({ error: 'Rate limit exceeded. Please try again in 10 minutes.' }, { status: 429 })
   }
 
   if (!process.env.GOOGLE_GEMINI_API_KEY) {

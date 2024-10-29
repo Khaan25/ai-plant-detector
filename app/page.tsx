@@ -89,16 +89,18 @@ export default function Page() {
               </div>
             )}
             <div className="flex justify-between">
-              <Button type="submit" onClick={handleSubmit} disabled={isLoading}>
-                {isLoading ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Identifying...
-                  </>
-                ) : (
-                  'Identify Plant'
-                )}
-              </Button>
+              {!result && (
+                <Button type="submit" onClick={handleSubmit} disabled={isLoading}>
+                  {isLoading ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Identifying...
+                    </>
+                  ) : (
+                    'Identify Plant'
+                  )}
+                </Button>
+              )}
               {result && (
                 <Button onClick={handleClear} variant="secondary">
                   Clear
