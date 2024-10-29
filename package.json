@@ -9,9 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "19.0.0-rc-69d4b800-20241021",
-    "react-dom": "19.0.0-rc-69d4b800-20241021",
-    "next": "15.0.1"
+    "@google/generative-ai": "^0.21.0",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@unkey/ratelimit": "^0.4.5",
+    "@upstash/redis": "^1.34.3",
+    "class-variance-authority": "^0.7.0",
+    "cloudinary": "^2.5.1",
+    "lucide-react": "^0.454.0",
+    "nanoid": "^5.0.8",
+    "next": "15.0.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "typescript": "^5",
