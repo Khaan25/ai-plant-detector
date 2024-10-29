@@ -17,7 +17,7 @@ type Result = {
   wikipediaLink: string
 }
 
-export default function ImageAnalyzer() {
+export default function Page() {
   const [result, setResult] = useState<Result | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [image, setImage] = useState<string | null>(null)
@@ -74,8 +74,8 @@ export default function ImageAnalyzer() {
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <CardTitle>Image Analyzer</CardTitle>
-          <CardDescription>Upload an image to analyze using Gemini AI</CardDescription>
+          <CardTitle>AI Image Identifier</CardTitle>
+          <CardDescription>Upload an image to identify the plant using Gemini AI</CardDescription>
         </CardHeader>
         <CardContent>
           <form className="space-y-4">
@@ -93,10 +93,10 @@ export default function ImageAnalyzer() {
                 {isLoading ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Analyzing...
+                    Identifying...
                   </>
                 ) : (
-                  'Analyze Image'
+                  'Identify Plant'
                 )}
               </Button>
               {result && (
@@ -117,7 +117,7 @@ export default function ImageAnalyzer() {
           )}
           {result && (
             <div className="w-full">
-              <h3 className="font-semibold mb-2">Analysis Result:</h3>
+              <h3 className="font-semibold mb-2">Identification Result:</h3>
               <pre className="bg-gray-100 p-2 rounded-md overflow-x-auto w-full">
                 <pre>{JSON.stringify(result, null, 2)}</pre>
               </pre>
