@@ -2,7 +2,7 @@
 
 **Live Link:** [https://ai-plant-detector-zia-unkey.vercel.app/](https://ai-plant-detector-zia-unkey.vercel.app/)
 
-This project showcases an AI-powered plant detector service built with Next.js 15, leveraging the new App Router and the shadcn/ui component library. Additionally, it integrates with Unkey.com for enforcing rate limits and API key validation.
+This project showcases an AI-powered plant detector service built with Next.js 15, leveraging the new App Router and the shadcn/ui component library. Additionally, it integrates with Unkey.com for enforcing rate limits (3 requests per 10 minutes).
 
 ## Key Features
 
