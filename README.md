@@ -7,7 +7,7 @@ This project showcases an AI-powered plant detector service built with Next.js 1
 ## Key Features
 
 - Next.js 15 with the new App Router
-- AI-powered plant detection.
+- AI-powered plant detection (Google Gemini)
 - Rate limiting based on Unkey configurations
 - UI components from the shadcn/ui library
 
