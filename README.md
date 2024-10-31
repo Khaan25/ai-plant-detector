@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Plant Detector with Next.js 15 and Shadcn UI
 
-## Getting Started
+**Live Link:** [https://ai-plant-detector-zia-unkey.vercel.app/](https://ai-plant-detector-zia-unkey.vercel.app/)
 
-First, run the development server:
+This project showcases an AI-powered plant detector service built with Next.js 15, leveraging the new App Router and the shadcn/ui component library. Additionally, it integrates with Unkey.com for enforcing rate limits and API key validation.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Key Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js 15 with the new App Router
+- AI-powered plant detection.
+- Rate limiting based on Unkey configurations
+- UI components from the shadcn/ui library
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Setup and Configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Install project dependencies:
+   ```
+   npm install
+   ```
+   or
+   ```
+   yarn install
+   ```
+   or
+   ```
+   bun install
+   ```
 
-## Learn More
+2. Configure environment variables:
+   Create a `.env` file in the project root with the following content:
+   ```
+   NEXT_PUBLIC_BASE_URL=http://localhost:3000
+   UNKEY_API_KEY=unkey_some_token
+   UNKEY_API_ID=api_some_id
+   REDIS_URL=https://some-redis-url.upstash.io
+   REDIS_TOKEN=some-redis-token
+   GOOGLE_GEMINI_API_KEY=some-gemini-key
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. Set up Unkey:
+   - Register at [unkey.com](https://unkey.com)
+   - Create a new API.
+   - Add the API key and API ID to the `.env` file.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Set up Upstash:
+   - Register at [upstash.com](https://upstash.com)
+   - Create a new Redis database.
+   - Add the Redis URL and token to the `.env` file.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. Launch the development server:
+   ```
+   npm run dev
+   ```
+   or
+   ```
+   yarn dev
+   ```
+   or
+   ```
+   bun dev
+   ```
 
-## Deploy on Vercel
+## Using the AI Plant Detector
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Head over to `http://localhost:3000` and upload the image of the plant you want to identify.
+- View the generated identification result.
